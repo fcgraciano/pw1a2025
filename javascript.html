@@ -1,27 +1,98 @@
 <script>
 
-var idade = "35"
-var idadePassada = 34
-var anoPassado = 2024
-var AnoAtual = '2025'
-var peso = 78.5
-var altura = 1.70
-var luzNaoApagada = false
-var semNamorada = true
-var fernando = 35
-var teste_do_prof = true
-var zeroPizzas = true
+    var idade = "35"
+    var idadePassada = 34
+    var anoPassado = 2024
+    var AnoAtual = '2025'
+    var peso = 78.5
+    var altura = 1.70
+    var luzNaoApagada = false
+    var semNamorada = true
+    var fernando = 35
+    var teste_do_prof = true
+    var zeroPizzas = true
 
 
-//var nome = prompt("Digite seu nome")
-//alert("O nome digitado foi:      "+nome)
+    //var nome = prompt("Digite seu nome")
+    //alert("O nome digitado foi:      "+nome)
 
-/*
-Crie 3 variaveis, 
-peça para o usuário digitar 3 numeros
-e exiba em um alerta a soma deles
+    /*
+    Crie 3 variaveis, 
+    peça para o usuário digitar 3 numeros
+    e exiba em um alerta a soma deles
+    */
+    /*
+    var num1 =  prompt("Digite um numero")
+    var num2 =  prompt("Digite um numero")
+    var num3 =  prompt("Digite um numero")
+    num1 = Number(num1)
+    num2 = Number(num2)
+    num3 = Number(num3)
+    var soma = num1+num2+num3
+    alert(soma)*/
+
+    //alert(Number(prompt("Digite um numero")) + Number(prompt("Digite um numero")) + Number(prompt("Digite um numero")))
+
+    /*
+    var numero = Number( prompt("Digite um numero") )
+    if(numero % 2 == 0)
+    {
+        alert("O número "+numero+" é par")
+    }
+    else
+    {
+        alert("O número "+numero+" é impar")
+    }
+    */
+
+    /*
+        Peça para o usuário digitar uma idade
+        e verifique se ele pode beber e dirigir
+        Se pode beber exiba um alerta 
+        autorizando comprar metanol
+    */
+   /*
+   var tempo = true
+   var dinheiro = true
+   if(tempo == true && dinheiro == true)
+   {
+        alert("viajo")
+   }
+   var namorada = false
+   if(namorada == true || dinheiro == true)
+   {
+
+   }
+
+   if(! (namorada == false) )
+   {
+
+   }
+   else
+   {
+     alert("o Not inverteu o resultado da expressão boleana")   
+   }
 */
-
+var salario = Number(prompt("Digite seu salario"))
+if(salario <= 499)
+{
+    alert("vc não vai para lugar nenhum")
+}
+else if( salario == 500)
+{
+    alert("Vc vai para SP")
+}
+else if( salario >= 501 && salario <=700)
+{
+    alert("Rio de Janeiro")
+}
+else if(salario >= 701 && salario <= 1000)
+{
+    alert("Minas Gerais")
+}
+else{
+    alert("Nordeste")
+}
 
 
 
