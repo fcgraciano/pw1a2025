@@ -56,8 +56,8 @@
             </tr>
         </thead>
         <tbody>
-            <tr style="border: 1px solid #000000;">
-                <td>11</td><!--Coluna B-->
+            <tr>
+                <td onclick="Marcar(this)" >11</td><!--Coluna B-->
                 <td>24</td><!--Coluna I-->
                 <td>40</td><!--Coluna N-->
                 <td>60</td><!--Coluna G-->
@@ -94,6 +94,69 @@
         </tbody>
     </table>
     <script>
+        var B = PreencherLista (1,15)
+        var I = PreencherLista (16,30)
+        var N = PreencherLista (31,45)
+        var G = PreencherLista (46,60)
+        var O = PreencherLista (61,75)
+        var SORTEIO = PreencherLista(1,75)
+
+        function Marcar(elementoClicado)
+        {
+            elementoClicado.innerText = NumeroAleatorio()
+        }
+
+
+        function NumeroAleatorio(min, max) 
+        {
+            var numero = Math.random() * max
+            numero = Math.floor(numero)   
+            if(numero >= min)
+            {
+                return numero
+            }
+            else
+            {
+                return NumeroAleatorio(min, max)
+            }
+            
+        }
+
+
+
+        function PreencherLista(inicial,final)
+        {
+            var listaRetorno = []
+            for (var i = inicial; i<= final; i++){
+                listaRetorno.push(i)
+            }
+            return listaRetorno
+        }
+        function ParOuImpar (numero){
+            if (numero%2==0) {
+                return "par"
+            }else{
+                return "impar"
+            }
+        }
+        function mostrarlista (lista){
+            return document.write("<h1>"+ lista + "</h1> <br>")
+        }
+        function mostrarlistadetalhada(lista){
+            for (var i = 0; i < lista.length; i++)
+            {
+                return document.write ("<h1>" + lista[i] + "</h1>")
+            }
+        }
+        mostrarlistadetalhada (B)
+        mostrarlistadetalhada (I)
+        mostrarlistadetalhada (N)
+        mostrarlistadetalhada (G)
+        mostrarlistadetalhada (O)
+        mostrarlistadetalhada (SORTEIO)
+    </script>
+    <script>
+        /*
         var B = [] // 1-15
         var I = [] // 16-30
         var N = [] // 31-45
@@ -130,7 +193,7 @@
         document.write("<h1>"+ I[8]+ " </h1>")
         /*
             Usando a lista N mostre apenas os números pares
-        */
+   
        for(var i = 0; i<15; i++)
        {
             if(N[i] % 2 == 0)
@@ -138,7 +201,7 @@
                 document.write("O numero é: "+N[i]+"<br>")
             }
        }
-
+    */
 
 
 
